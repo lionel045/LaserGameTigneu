@@ -1,0 +1,990 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B40A42D12C753B3300BDD954 /* MockFormulaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40A42D02C753B3300BDD954 /* MockFormulaViewModel.swift */; };
+		B42FDC4C2C4DBE00000C2A2D /* GetFormulaUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42FDC4B2C4DBE00000C2A2D /* GetFormulaUseCase.swift */; };
+		B43087132C55064F005D98BC /* ContentIcon+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43087122C55064F005D98BC /* ContentIcon+Label.swift */; };
+		B43087172C55B3B2005D98BC /* SegmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43087162C55B3B2005D98BC /* SegmentedControlView.swift */; };
+		B43087222C563BC5005D98BC /* ServiceStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43087212C563BC5005D98BC /* ServiceStorageManager.swift */; };
+		B43F107B2C83B5D600AE5787 /* GoogleSigninService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F107A2C83B5D600AE5787 /* GoogleSigninService.swift */; };
+		B43F107F2C83BAC900AE5787 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B43F107E2C83BAC900AE5787 /* GoogleSignIn */; };
+		B43F10812C83BAC900AE5787 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B43F10802C83BAC900AE5787 /* GoogleSignInSwift */; };
+		B43F10832C83BFCB00AE5787 /* AnonymousAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F10822C83BFCB00AE5787 /* AnonymousAuthService.swift */; };
+		B43F10852C83C0F000AE5787 /* AuthRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F10842C83C0F000AE5787 /* AuthRepositoryInterface.swift */; };
+		B43F10872C83C8F700AE5787 /* SignInAnonymouslyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F10862C83C8F700AE5787 /* SignInAnonymouslyUseCase.swift */; };
+		B43F10892C83C93700AE5787 /* SignInWithGoogleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F10882C83C93700AE5787 /* SignInWithGoogleUseCase.swift */; };
+		B43F108B2C83C99C00AE5787 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F108A2C83C99C00AE5787 /* AuthViewModel.swift */; };
+		B43F108D2C83CD9B00AE5787 /* AppAuthDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F108C2C83CD9B00AE5787 /* AppAuthDIContainer.swift */; };
+		B43F10932C83D7B000AE5787 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B43F10922C83D7B000AE5787 /* GoogleService-Info.plist */; };
+		B43F10952C83E0FF00AE5787 /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F10942C83E0FF00AE5787 /* AuthState.swift */; };
+		B43F10992C845C6700AE5787 /* SignInWithGoogleUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F10982C845C6700AE5787 /* SignInWithGoogleUseCaseInterface.swift */; };
+		B43F109B2C845E6000AE5787 /* SignInAnonymouslyUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F109A2C845E6000AE5787 /* SignInAnonymouslyUseCaseInterface.swift */; };
+		B43F109D2C84609F00AE5787 /* MockServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F109C2C84609F00AE5787 /* MockServices.swift */; };
+		B43F109F2C84702200AE5787 /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F109E2C84702200AE5787 /* MockUser.swift */; };
+		B43F10A32C8471FE00AE5787 /* DomainUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F10A22C8471FE00AE5787 /* DomainUser.swift */; };
+		B446702E2C77E7F300AA149D /* FormulaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B446702D2C77E7F300AA149D /* FormulaRow.swift */; };
+		B44670332C78010400AA149D /* ExtensionDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44670322C78010400AA149D /* ExtensionDouble.swift */; };
+		B44670352C7A002D00AA149D /* SegmentedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44670342C7A002C00AA149D /* SegmentedState.swift */; };
+		B44670372C7A00D700AA149D /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44670362C7A00D700AA149D /* ExtensionColor.swift */; };
+		B46062522C58F5720073BA23 /* ServiceFirestoreFormualDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46062512C58F5720073BA23 /* ServiceFirestoreFormualDb.swift */; };
+		B46062542C58F6250073BA23 /* ServiceStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46062532C58F6250073BA23 /* ServiceStorageProtocol.swift */; };
+		B46062562C5C34840073BA23 /* FormulaFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46062552C5C34840073BA23 /* FormulaFirestore.swift */; };
+		B46DBA672C3DBCC700FFD865 /* LaserGameTIgneuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46DBA662C3DBCC700FFD865 /* LaserGameTIgneuApp.swift */; };
+		B46DBA692C3DBCC700FFD865 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46DBA682C3DBCC700FFD865 /* ContentView.swift */; };
+		B46DBA6B2C3DBCC800FFD865 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B46DBA6A2C3DBCC800FFD865 /* Assets.xcassets */; };
+		B46DBA6F2C3DBCC800FFD865 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B46DBA6E2C3DBCC800FFD865 /* Preview Assets.xcassets */; };
+		B46DBA792C3DBCC900FFD865 /* LaserGameTIgneuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46DBA782C3DBCC900FFD865 /* LaserGameTIgneuTests.swift */; };
+		B46DBA832C3DBCC900FFD865 /* LaserGameTIgneuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46DBA822C3DBCC900FFD865 /* LaserGameTIgneuUITests.swift */; };
+		B46DBA852C3DBCC900FFD865 /* LaserGameTIgneuUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46DBA842C3DBCC900FFD865 /* LaserGameTIgneuUITestsLaunchTests.swift */; };
+		B46EC6CD2C53B732001A5F71 /* FormulaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46EC6CC2C53B732001A5F71 /* FormulaListView.swift */; };
+		B477039E2C3DBE810051D350 /* LaunchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B477039D2C3DBE810051D350 /* LaunchPage.swift */; };
+		B4AB8DB72C85D9F2001F3B63 /* AuthRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AB8DB62C85D9F2001F3B63 /* AuthRepositoryImpl.swift */; };
+		B4B3E38F2C3DCAEC009DF0FC /* User page.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B3E38E2C3DCAEC009DF0FC /* User page.swift */; };
+		B4C14A572C70926C00E80ED1 /* AppFormulaDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C14A562C70926C00E80ED1 /* AppFormulaDIContainer.swift */; };
+		B4C14A592C7245DC00E80ED1 /* FormulaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C14A582C7245DC00E80ED1 /* FormulaViewModel.swift */; };
+		B4D085482C60EF4E009CB62D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B4D085472C60EF4E009CB62D /* FirebaseAuth */; };
+		B4D0854A2C60EF4E009CB62D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B4D085492C60EF4E009CB62D /* FirebaseFirestore */; };
+		B4D0854C2C60EF4E009CB62D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B4D0854B2C60EF4E009CB62D /* FirebaseStorage */; };
+		B4D0854E2C610A40009CB62D /* ServiceFormulaDbProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D0854D2C610A40009CB62D /* ServiceFormulaDbProtocol.swift */; };
+		B4D085532C64DE72009CB62D /* FormulaRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D085522C64DE72009CB62D /* FormulaRepositoryImpl.swift */; };
+		B4D085562C68D255009CB62D /* GetFormulasUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D085552C68D255009CB62D /* GetFormulasUseCaseInterface.swift */; };
+		B4DFF27F2C8E4CAA00D96187 /* MockFormulaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DFF27E2C8E4CAA00D96187 /* MockFormulaModel.swift */; };
+		B4DFF2822C8F130800D96187 /* CoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DFF2812C8F130800D96187 /* CoverView.swift */; };
+		B4EEF3462C52F9F400EED3DF /* FormulaRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EEF3452C52F9F400EED3DF /* FormulaRepositoryInterface.swift */; };
+		B4EEF3482C52FEDA00EED3DF /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EEF3472C52FEDA00EED3DF /* Formula.swift */; };
+		B4EEF35C2C53137300EED3DF /* FormulaImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EEF35B2C53137300EED3DF /* FormulaImage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B46DBA752C3DBCC900FFD865 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B46DBA5B2C3DBCC700FFD865 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B46DBA622C3DBCC700FFD865;
+			remoteInfo = LaserGameTIgneu;
+		};
+		B46DBA7F2C3DBCC900FFD865 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B46DBA5B2C3DBCC700FFD865 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B46DBA622C3DBCC700FFD865;
+			remoteInfo = LaserGameTIgneu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B40A42D02C753B3300BDD954 /* MockFormulaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFormulaViewModel.swift; sourceTree = "<group>"; };
+		B42FDC4B2C4DBE00000C2A2D /* GetFormulaUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFormulaUseCase.swift; sourceTree = "<group>"; };
+		B43087122C55064F005D98BC /* ContentIcon+Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentIcon+Label.swift"; sourceTree = "<group>"; };
+		B43087162C55B3B2005D98BC /* SegmentedControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlView.swift; sourceTree = "<group>"; };
+		B43087212C563BC5005D98BC /* ServiceStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceStorageManager.swift; sourceTree = "<group>"; };
+		B43F107A2C83B5D600AE5787 /* GoogleSigninService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSigninService.swift; sourceTree = "<group>"; };
+		B43F10822C83BFCB00AE5787 /* AnonymousAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousAuthService.swift; sourceTree = "<group>"; };
+		B43F10842C83C0F000AE5787 /* AuthRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryInterface.swift; sourceTree = "<group>"; };
+		B43F10862C83C8F700AE5787 /* SignInAnonymouslyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAnonymouslyUseCase.swift; sourceTree = "<group>"; };
+		B43F10882C83C93700AE5787 /* SignInWithGoogleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithGoogleUseCase.swift; sourceTree = "<group>"; };
+		B43F108A2C83C99C00AE5787 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		B43F108C2C83CD9B00AE5787 /* AppAuthDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAuthDIContainer.swift; sourceTree = "<group>"; };
+		B43F10912C83D5D000AE5787 /* LaserGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "LaserGame-Info.plist"; sourceTree = "<group>"; };
+		B43F10922C83D7B000AE5787 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B43F10942C83E0FF00AE5787 /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		B43F10982C845C6700AE5787 /* SignInWithGoogleUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithGoogleUseCaseInterface.swift; sourceTree = "<group>"; };
+		B43F109A2C845E6000AE5787 /* SignInAnonymouslyUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAnonymouslyUseCaseInterface.swift; sourceTree = "<group>"; };
+		B43F109C2C84609F00AE5787 /* MockServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServices.swift; sourceTree = "<group>"; };
+		B43F109E2C84702200AE5787 /* MockUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
+		B43F10A22C8471FE00AE5787 /* DomainUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainUser.swift; sourceTree = "<group>"; };
+		B446702D2C77E7F300AA149D /* FormulaRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaRow.swift; sourceTree = "<group>"; };
+		B44670322C78010400AA149D /* ExtensionDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDouble.swift; sourceTree = "<group>"; };
+		B44670342C7A002C00AA149D /* SegmentedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedState.swift; sourceTree = "<group>"; };
+		B44670362C7A00D700AA149D /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
+		B46062512C58F5720073BA23 /* ServiceFirestoreFormualDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFirestoreFormualDb.swift; sourceTree = "<group>"; };
+		B46062532C58F6250073BA23 /* ServiceStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServiceStorageProtocol.swift; path = "LaserGameTIgneu/Data Layer/ServiceStorageProtocol.swift"; sourceTree = SOURCE_ROOT; };
+		B46062552C5C34840073BA23 /* FormulaFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaFirestore.swift; sourceTree = "<group>"; };
+		B46DBA632C3DBCC700FFD865 /* LaserGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaserGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B46DBA662C3DBCC700FFD865 /* LaserGameTIgneuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaserGameTIgneuApp.swift; sourceTree = "<group>"; };
+		B46DBA682C3DBCC700FFD865 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B46DBA6A2C3DBCC800FFD865 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B46DBA6C2C3DBCC800FFD865 /* LaserGameTIgneu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LaserGameTIgneu.entitlements; sourceTree = "<group>"; };
+		B46DBA6E2C3DBCC800FFD865 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B46DBA742C3DBCC900FFD865 /* LaserGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaserGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B46DBA782C3DBCC900FFD865 /* LaserGameTIgneuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaserGameTIgneuTests.swift; sourceTree = "<group>"; };
+		B46DBA7E2C3DBCC900FFD865 /* LaserGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaserGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B46DBA822C3DBCC900FFD865 /* LaserGameTIgneuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaserGameTIgneuUITests.swift; sourceTree = "<group>"; };
+		B46DBA842C3DBCC900FFD865 /* LaserGameTIgneuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaserGameTIgneuUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B46EC6CC2C53B732001A5F71 /* FormulaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaListView.swift; sourceTree = "<group>"; };
+		B477039D2C3DBE810051D350 /* LaunchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPage.swift; sourceTree = "<group>"; };
+		B4AB8DB62C85D9F2001F3B63 /* AuthRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryImpl.swift; sourceTree = "<group>"; };
+		B4B3E38E2C3DCAEC009DF0FC /* User page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User page.swift"; sourceTree = "<group>"; };
+		B4C14A562C70926C00E80ED1 /* AppFormulaDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFormulaDIContainer.swift; sourceTree = "<group>"; };
+		B4C14A582C7245DC00E80ED1 /* FormulaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaViewModel.swift; sourceTree = "<group>"; };
+		B4D0854D2C610A40009CB62D /* ServiceFormulaDbProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFormulaDbProtocol.swift; sourceTree = "<group>"; };
+		B4D085522C64DE72009CB62D /* FormulaRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaRepositoryImpl.swift; sourceTree = "<group>"; };
+		B4D085552C68D255009CB62D /* GetFormulasUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFormulasUseCaseInterface.swift; sourceTree = "<group>"; };
+		B4DFF27E2C8E4CAA00D96187 /* MockFormulaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFormulaModel.swift; sourceTree = "<group>"; };
+		B4DFF2812C8F130800D96187 /* CoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverView.swift; sourceTree = "<group>"; };
+		B4EEF3452C52F9F400EED3DF /* FormulaRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaRepositoryInterface.swift; sourceTree = "<group>"; };
+		B4EEF3472C52FEDA00EED3DF /* Formula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formula.swift; sourceTree = "<group>"; };
+		B4EEF35B2C53137300EED3DF /* FormulaImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaImage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B46DBA602C3DBCC700FFD865 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B43F10812C83BAC900AE5787 /* GoogleSignInSwift in Frameworks */,
+				B4D085482C60EF4E009CB62D /* FirebaseAuth in Frameworks */,
+				B43F107F2C83BAC900AE5787 /* GoogleSignIn in Frameworks */,
+				B4D0854A2C60EF4E009CB62D /* FirebaseFirestore in Frameworks */,
+				B4D0854C2C60EF4E009CB62D /* FirebaseStorage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B46DBA712C3DBCC900FFD865 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B46DBA7B2C3DBCC900FFD865 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B40A42CF2C753B1600BDD954 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				B4DFF27E2C8E4CAA00D96187 /* MockFormulaModel.swift */,
+				B40A42D02C753B3300BDD954 /* MockFormulaViewModel.swift */,
+				B43F109C2C84609F00AE5787 /* MockServices.swift */,
+				B43F109E2C84702200AE5787 /* MockUser.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		B42FDC482C4DBBBA000C2A2D /* Domain Layer */ = {
+			isa = PBXGroup;
+			children = (
+				B4EEF34A2C53034300EED3DF /* RepositoryInterface */,
+				B4EEF3492C53002000EED3DF /* Model */,
+				B42FDC4A2C4DBC89000C2A2D /* UseCases */,
+			);
+			path = "Domain Layer";
+			sourceTree = "<group>";
+		};
+		B42FDC492C4DBBD3000C2A2D /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				B4D085512C64DE42009CB62D /* Repository */,
+				B4D085502C64DE11009CB62D /* Services */,
+				B4EEF35A2C53136000EED3DF /* Entity */,
+				B4EEF3592C53113800EED3DF /* InterfaceServices */,
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		B42FDC4A2C4DBC89000C2A2D /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				B42FDC4B2C4DBE00000C2A2D /* GetFormulaUseCase.swift */,
+				B4D085552C68D255009CB62D /* GetFormulasUseCaseInterface.swift */,
+				B43F10862C83C8F700AE5787 /* SignInAnonymouslyUseCase.swift */,
+				B43F10882C83C93700AE5787 /* SignInWithGoogleUseCase.swift */,
+				B43F10982C845C6700AE5787 /* SignInWithGoogleUseCaseInterface.swift */,
+				B43F109A2C845E6000AE5787 /* SignInAnonymouslyUseCaseInterface.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		B43F107D2C83BAC900AE5787 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B44670312C7800ED00AA149D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B46DBA6A2C3DBCC800FFD865 /* Assets.xcassets */,
+				B43F10922C83D7B000AE5787 /* GoogleService-Info.plist */,
+				B46DBA662C3DBCC700FFD865 /* LaserGameTIgneuApp.swift */,
+				B44670322C78010400AA149D /* ExtensionDouble.swift */,
+				B43F108C2C83CD9B00AE5787 /* AppAuthDIContainer.swift */,
+				B4C14A562C70926C00E80ED1 /* AppFormulaDIContainer.swift */,
+				B44670342C7A002C00AA149D /* SegmentedState.swift */,
+				B43F10942C83E0FF00AE5787 /* AuthState.swift */,
+				B4DFF2802C8E567F00D96187 /* Extension */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B46DBA5A2C3DBCC700FFD865 = {
+			isa = PBXGroup;
+			children = (
+				B43F10912C83D5D000AE5787 /* LaserGame-Info.plist */,
+				B46DBA652C3DBCC700FFD865 /* LaserGameTIgneu */,
+				B46DBA772C3DBCC900FFD865 /* LaserGameTIgneuTests */,
+				B46DBA812C3DBCC900FFD865 /* LaserGameTIgneuUITests */,
+				B46DBA642C3DBCC700FFD865 /* Products */,
+				B43F107D2C83BAC900AE5787 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B46DBA642C3DBCC700FFD865 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B46DBA632C3DBCC700FFD865 /* LaserGame.app */,
+				B46DBA742C3DBCC900FFD865 /* LaserGameTests.xctest */,
+				B46DBA7E2C3DBCC900FFD865 /* LaserGameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B46DBA652C3DBCC700FFD865 /* LaserGameTIgneu */ = {
+			isa = PBXGroup;
+			children = (
+				B44670312C7800ED00AA149D /* Utils */,
+				B40A42CF2C753B1600BDD954 /* Mock */,
+				B42FDC492C4DBBD3000C2A2D /* Data Layer */,
+				B42FDC482C4DBBBA000C2A2D /* Domain Layer */,
+				B4E31D162C43F161002452E8 /* Presentation Layer */,
+				B46DBA6C2C3DBCC800FFD865 /* LaserGameTIgneu.entitlements */,
+				B46DBA6D2C3DBCC800FFD865 /* Preview Content */,
+			);
+			path = LaserGameTIgneu;
+			sourceTree = "<group>";
+		};
+		B46DBA6D2C3DBCC800FFD865 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B46DBA6E2C3DBCC800FFD865 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B46DBA772C3DBCC900FFD865 /* LaserGameTIgneuTests */ = {
+			isa = PBXGroup;
+			children = (
+				B46DBA782C3DBCC900FFD865 /* LaserGameTIgneuTests.swift */,
+			);
+			path = LaserGameTIgneuTests;
+			sourceTree = "<group>";
+		};
+		B46DBA812C3DBCC900FFD865 /* LaserGameTIgneuUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B46DBA822C3DBCC900FFD865 /* LaserGameTIgneuUITests.swift */,
+				B46DBA842C3DBCC900FFD865 /* LaserGameTIgneuUITestsLaunchTests.swift */,
+			);
+			path = LaserGameTIgneuUITests;
+			sourceTree = "<group>";
+		};
+		B4D085502C64DE11009CB62D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B43087212C563BC5005D98BC /* ServiceStorageManager.swift */,
+				B46062512C58F5720073BA23 /* ServiceFirestoreFormualDb.swift */,
+				B43F107A2C83B5D600AE5787 /* GoogleSigninService.swift */,
+				B43F10822C83BFCB00AE5787 /* AnonymousAuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B4D085512C64DE42009CB62D /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B4D085522C64DE72009CB62D /* FormulaRepositoryImpl.swift */,
+				B4AB8DB62C85D9F2001F3B63 /* AuthRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B4DFF2802C8E567F00D96187 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B44670362C7A00D700AA149D /* ExtensionColor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B4E31D162C43F161002452E8 /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				B43F108A2C83C99C00AE5787 /* AuthViewModel.swift */,
+				B4C14A582C7245DC00E80ED1 /* FormulaViewModel.swift */,
+				B4E31D182C43F240002452E8 /* View */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		B4E31D182C43F240002452E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B477039D2C3DBE810051D350 /* LaunchPage.swift */,
+				B4B3E38E2C3DCAEC009DF0FC /* User page.swift */,
+				B46DBA682C3DBCC700FFD865 /* ContentView.swift */,
+				B4E31D192C43F250002452E8 /* Component */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4E31D192C43F250002452E8 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				B46EC6CC2C53B732001A5F71 /* FormulaListView.swift */,
+				B4DFF2812C8F130800D96187 /* CoverView.swift */,
+				B43087122C55064F005D98BC /* ContentIcon+Label.swift */,
+				B446702D2C77E7F300AA149D /* FormulaRow.swift */,
+				B43087162C55B3B2005D98BC /* SegmentedControlView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		B4EEF3492C53002000EED3DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B4EEF3472C52FEDA00EED3DF /* Formula.swift */,
+				B43F10A22C8471FE00AE5787 /* DomainUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4EEF34A2C53034300EED3DF /* RepositoryInterface */ = {
+			isa = PBXGroup;
+			children = (
+				B4EEF3452C52F9F400EED3DF /* FormulaRepositoryInterface.swift */,
+				B43F10842C83C0F000AE5787 /* AuthRepositoryInterface.swift */,
+			);
+			path = RepositoryInterface;
+			sourceTree = "<group>";
+		};
+		B4EEF3592C53113800EED3DF /* InterfaceServices */ = {
+			isa = PBXGroup;
+			children = (
+				B46062532C58F6250073BA23 /* ServiceStorageProtocol.swift */,
+				B4D0854D2C610A40009CB62D /* ServiceFormulaDbProtocol.swift */,
+			);
+			path = InterfaceServices;
+			sourceTree = "<group>";
+		};
+		B4EEF35A2C53136000EED3DF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B4EEF35B2C53137300EED3DF /* FormulaImage.swift */,
+				B46062552C5C34840073BA23 /* FormulaFirestore.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B46DBA622C3DBCC700FFD865 /* LaserGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B46DBA882C3DBCC900FFD865 /* Build configuration list for PBXNativeTarget "LaserGame" */;
+			buildPhases = (
+				B46DBA5F2C3DBCC700FFD865 /* Sources */,
+				B46DBA602C3DBCC700FFD865 /* Frameworks */,
+				B46DBA612C3DBCC700FFD865 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LaserGame;
+			packageProductDependencies = (
+				B4D085472C60EF4E009CB62D /* FirebaseAuth */,
+				B4D085492C60EF4E009CB62D /* FirebaseFirestore */,
+				B4D0854B2C60EF4E009CB62D /* FirebaseStorage */,
+				B43F107E2C83BAC900AE5787 /* GoogleSignIn */,
+				B43F10802C83BAC900AE5787 /* GoogleSignInSwift */,
+			);
+			productName = LaserGameTIgneu;
+			productReference = B46DBA632C3DBCC700FFD865 /* LaserGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B46DBA732C3DBCC900FFD865 /* LaserGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B46DBA8B2C3DBCC900FFD865 /* Build configuration list for PBXNativeTarget "LaserGameTests" */;
+			buildPhases = (
+				B46DBA702C3DBCC900FFD865 /* Sources */,
+				B46DBA712C3DBCC900FFD865 /* Frameworks */,
+				B46DBA722C3DBCC900FFD865 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B46DBA762C3DBCC900FFD865 /* PBXTargetDependency */,
+			);
+			name = LaserGameTests;
+			productName = LaserGameTIgneuTests;
+			productReference = B46DBA742C3DBCC900FFD865 /* LaserGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B46DBA7D2C3DBCC900FFD865 /* LaserGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B46DBA8E2C3DBCC900FFD865 /* Build configuration list for PBXNativeTarget "LaserGameUITests" */;
+			buildPhases = (
+				B46DBA7A2C3DBCC900FFD865 /* Sources */,
+				B46DBA7B2C3DBCC900FFD865 /* Frameworks */,
+				B46DBA7C2C3DBCC900FFD865 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B46DBA802C3DBCC900FFD865 /* PBXTargetDependency */,
+			);
+			name = LaserGameUITests;
+			productName = LaserGameTIgneuUITests;
+			productReference = B46DBA7E2C3DBCC900FFD865 /* LaserGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B46DBA5B2C3DBCC700FFD865 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					B46DBA622C3DBCC700FFD865 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					B46DBA732C3DBCC900FFD865 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = B46DBA622C3DBCC700FFD865;
+					};
+					B46DBA7D2C3DBCC900FFD865 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = B46DBA622C3DBCC700FFD865;
+					};
+				};
+			};
+			buildConfigurationList = B46DBA5E2C3DBCC700FFD865 /* Build configuration list for PBXProject "LaserGame" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B46DBA5A2C3DBCC700FFD865;
+			packageReferences = (
+				B4D085462C60EF4E009CB62D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B43F107C2C83B91B00AE5787 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
+			productRefGroup = B46DBA642C3DBCC700FFD865 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B46DBA622C3DBCC700FFD865 /* LaserGame */,
+				B46DBA7D2C3DBCC900FFD865 /* LaserGameUITests */,
+				B46DBA732C3DBCC900FFD865 /* LaserGameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B46DBA612C3DBCC700FFD865 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B46DBA6F2C3DBCC800FFD865 /* Preview Assets.xcassets in Resources */,
+				B46DBA6B2C3DBCC800FFD865 /* Assets.xcassets in Resources */,
+				B43F10932C83D7B000AE5787 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B46DBA722C3DBCC900FFD865 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B46DBA7C2C3DBCC900FFD865 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B46DBA5F2C3DBCC700FFD865 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4EEF3462C52F9F400EED3DF /* FormulaRepositoryInterface.swift in Sources */,
+				B477039E2C3DBE810051D350 /* LaunchPage.swift in Sources */,
+				B43F10952C83E0FF00AE5787 /* AuthState.swift in Sources */,
+				B43087132C55064F005D98BC /* ContentIcon+Label.swift in Sources */,
+				B46062522C58F5720073BA23 /* ServiceFirestoreFormualDb.swift in Sources */,
+				B44670352C7A002D00AA149D /* SegmentedState.swift in Sources */,
+				B4AB8DB72C85D9F2001F3B63 /* AuthRepositoryImpl.swift in Sources */,
+				B43F108D2C83CD9B00AE5787 /* AppAuthDIContainer.swift in Sources */,
+				B46DBA692C3DBCC700FFD865 /* ContentView.swift in Sources */,
+				B4D085532C64DE72009CB62D /* FormulaRepositoryImpl.swift in Sources */,
+				B4D0854E2C610A40009CB62D /* ServiceFormulaDbProtocol.swift in Sources */,
+				B43F10892C83C93700AE5787 /* SignInWithGoogleUseCase.swift in Sources */,
+				B43F109B2C845E6000AE5787 /* SignInAnonymouslyUseCaseInterface.swift in Sources */,
+				B43F10852C83C0F000AE5787 /* AuthRepositoryInterface.swift in Sources */,
+				B46062542C58F6250073BA23 /* ServiceStorageProtocol.swift in Sources */,
+				B43F108B2C83C99C00AE5787 /* AuthViewModel.swift in Sources */,
+				B4D085562C68D255009CB62D /* GetFormulasUseCaseInterface.swift in Sources */,
+				B4DFF2822C8F130800D96187 /* CoverView.swift in Sources */,
+				B43F10832C83BFCB00AE5787 /* AnonymousAuthService.swift in Sources */,
+				B40A42D12C753B3300BDD954 /* MockFormulaViewModel.swift in Sources */,
+				B43087222C563BC5005D98BC /* ServiceStorageManager.swift in Sources */,
+				B4B3E38F2C3DCAEC009DF0FC /* User page.swift in Sources */,
+				B43F10872C83C8F700AE5787 /* SignInAnonymouslyUseCase.swift in Sources */,
+				B46EC6CD2C53B732001A5F71 /* FormulaListView.swift in Sources */,
+				B4EEF3482C52FEDA00EED3DF /* Formula.swift in Sources */,
+				B43F10992C845C6700AE5787 /* SignInWithGoogleUseCaseInterface.swift in Sources */,
+				B4DFF27F2C8E4CAA00D96187 /* MockFormulaModel.swift in Sources */,
+				B44670332C78010400AA149D /* ExtensionDouble.swift in Sources */,
+				B46062562C5C34840073BA23 /* FormulaFirestore.swift in Sources */,
+				B43F109F2C84702200AE5787 /* MockUser.swift in Sources */,
+				B446702E2C77E7F300AA149D /* FormulaRow.swift in Sources */,
+				B44670372C7A00D700AA149D /* ExtensionColor.swift in Sources */,
+				B43F10A32C8471FE00AE5787 /* DomainUser.swift in Sources */,
+				B43F107B2C83B5D600AE5787 /* GoogleSigninService.swift in Sources */,
+				B42FDC4C2C4DBE00000C2A2D /* GetFormulaUseCase.swift in Sources */,
+				B43F109D2C84609F00AE5787 /* MockServices.swift in Sources */,
+				B4C14A592C7245DC00E80ED1 /* FormulaViewModel.swift in Sources */,
+				B46DBA672C3DBCC700FFD865 /* LaserGameTIgneuApp.swift in Sources */,
+				B4C14A572C70926C00E80ED1 /* AppFormulaDIContainer.swift in Sources */,
+				B4EEF35C2C53137300EED3DF /* FormulaImage.swift in Sources */,
+				B43087172C55B3B2005D98BC /* SegmentedControlView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B46DBA702C3DBCC900FFD865 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B46DBA792C3DBCC900FFD865 /* LaserGameTIgneuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B46DBA7A2C3DBCC900FFD865 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B46DBA852C3DBCC900FFD865 /* LaserGameTIgneuUITestsLaunchTests.swift in Sources */,
+				B46DBA832C3DBCC900FFD865 /* LaserGameTIgneuUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B46DBA762C3DBCC900FFD865 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B46DBA622C3DBCC700FFD865 /* LaserGame */;
+			targetProxy = B46DBA752C3DBCC900FFD865 /* PBXContainerItemProxy */;
+		};
+		B46DBA802C3DBCC900FFD865 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B46DBA622C3DBCC700FFD865 /* LaserGame */;
+			targetProxy = B46DBA7F2C3DBCC900FFD865 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B46DBA862C3DBCC900FFD865 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B46DBA872C3DBCC900FFD865 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		B46DBA892C3DBCC900FFD865 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LaserGameTIgneu/LaserGameTIgneu.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LaserGameTIgneu/Preview Content\"";
+				DEVELOPMENT_TEAM = 285377BMM7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LaserGame-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lionel.LaserGameTIgneu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B46DBA8A2C3DBCC900FFD865 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LaserGameTIgneu/LaserGameTIgneu.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LaserGameTIgneu/Preview Content\"";
+				DEVELOPMENT_TEAM = 285377BMM7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LaserGame-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lionel.LaserGameTIgneu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B46DBA8C2C3DBCC900FFD865 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 285377BMM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lionel.LaserGameTIgneuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LaserGame.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LaserGame";
+			};
+			name = Debug;
+		};
+		B46DBA8D2C3DBCC900FFD865 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 285377BMM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lionel.LaserGameTIgneuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LaserGame.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LaserGame";
+			};
+			name = Release;
+		};
+		B46DBA8F2C3DBCC900FFD865 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 285377BMM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lionel.LaserGameTIgneuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LaserGameTIgneu;
+			};
+			name = Debug;
+		};
+		B46DBA902C3DBCC900FFD865 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 285377BMM7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lionel.LaserGameTIgneuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LaserGameTIgneu;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B46DBA5E2C3DBCC700FFD865 /* Build configuration list for PBXProject "LaserGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B46DBA862C3DBCC900FFD865 /* Debug */,
+				B46DBA872C3DBCC900FFD865 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B46DBA882C3DBCC900FFD865 /* Build configuration list for PBXNativeTarget "LaserGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B46DBA892C3DBCC900FFD865 /* Debug */,
+				B46DBA8A2C3DBCC900FFD865 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B46DBA8B2C3DBCC900FFD865 /* Build configuration list for PBXNativeTarget "LaserGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B46DBA8C2C3DBCC900FFD865 /* Debug */,
+				B46DBA8D2C3DBCC900FFD865 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B46DBA8E2C3DBCC900FFD865 /* Build configuration list for PBXNativeTarget "LaserGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B46DBA8F2C3DBCC900FFD865 /* Debug */,
+				B46DBA902C3DBCC900FFD865 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B43F107C2C83B91B00AE5787 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		B4D085462C60EF4E009CB62D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B43F107E2C83BAC900AE5787 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B43F107C2C83B91B00AE5787 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		B43F10802C83BAC900AE5787 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B43F107C2C83B91B00AE5787 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		B4D085472C60EF4E009CB62D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4D085462C60EF4E009CB62D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		B4D085492C60EF4E009CB62D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4D085462C60EF4E009CB62D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		B4D0854B2C60EF4E009CB62D /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4D085462C60EF4E009CB62D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B46DBA5B2C3DBCC700FFD865 /* Project object */;
+}
